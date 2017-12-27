@@ -10,7 +10,7 @@ namespace Gate;
 
 use Gate\Action\GateActionAbs;
 use Gate\Exception\TicketNotExistException;
-use Gate\Store\LoginBeanInf;
+use Gate\Storage\LoginBeanInf;
 use Gate\Ticket\GateTicketAbs;
 
 class TicketBuilder
