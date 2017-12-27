@@ -1,0 +1,28 @@
+{
+  "name": "shiogong/gate",
+  "description": "GateSystem",
+  "keywords": [
+    "own-system",
+    "login",
+    "auth",
+    "login-ticket"
+  ],
+  "homepage": "http://www.shiogong.com",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "ShiOGong",
+      "email": "2607572176@qq.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.1.0",
+    "ext-gd": "*"
+  },
+  "autoload": {
+    "psr-0": {
+      "Gate\\": "src"
+    }
+  },
+  "minimum-stability": "stable"
+}
