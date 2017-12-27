@@ -1,10 +1,6 @@
 <?php
 
-namespace App\Http\Process\Gate;
-
-use App\Http\Process\Gate\Store\LoginBeanInf;
-use App\Http\Process\SystemStorage\Session;
-use App\Http\Process\SystemStorage\StorageInf;
+namespace Gate\Storage;
 
 
 /**

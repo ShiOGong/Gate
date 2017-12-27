@@ -6,7 +6,7 @@
  * Time: 下午3:36
  */
 
-namespace App\Http\Process\Gate\Exception;
+namespace Gate\Exception;
 
 
 use Exception;
@@ -14,7 +14,7 @@ use Throwable;
 
 class TicketNotExistException extends Exception
 {
-    public function __construct(string $message = "", int $code = 0, Throwable $previous = null)
+    public function __construct($message = "", $code = 0, $previous = null)
     {
         parent::__construct($message, $code, $previous);
     }

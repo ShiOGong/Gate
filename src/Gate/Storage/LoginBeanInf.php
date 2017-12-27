@@ -6,7 +6,7 @@
  * Time: 上午10:16
  */
 
-namespace App\Http\Process\Gate\Store;
+namespace Gate\Storage;
 
 
 interface LoginBeanInf

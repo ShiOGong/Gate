@@ -6,7 +6,7 @@
  * Time: 上午11:11
  */
 
-namespace App\Http\Process\Gate;
+namespace Gate;
 
 
 class GateBasisOf

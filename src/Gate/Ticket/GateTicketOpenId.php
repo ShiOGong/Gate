@@ -6,11 +6,8 @@
  * Time: 下午3:49
  */
 
-namespace App\Http\Process\Gate\Ticket;
+namespace Gate\Ticket;
 
-
-use App\Models\User;
-use App\Models\UserToken;
 
 class GateTicketOpenId extends GateTicketAbs
 {
@@ -36,9 +33,9 @@ class GateTicketOpenId extends GateTicketAbs
         if ($this->matchingTicketData[0]['user_token_value'] != $this->basisOfData->getKeyValue()) {
             throw new \Exception('关键值不能吻合');
         }
-        $userModel = new User();
-        $userData = $userModel->findUserData($this->matchingTicketData[0]['user_id'])->toArray();
-        $this->setMatchingUserData($userData);
+//        $userModel = new User();
+//        $userData = $userModel->findUserData($this->matchingTicketData[0]['user_id'])->toArray();
+//        $this->setMatchingUserData($userData);
 
 
         // TODO:: 授权认证过程
@@ -99,6 +96,7 @@ class GateTicketOpenId extends GateTicketAbs
      */
     public function getTicketType()
     {
-        return UserToken::USER_TOKEN_TYPE_MINIPROGRAM;
+//        return UserToken::USER_TOKEN_TYPE_MINIPROGRAM;
+        return 1;
     }
 }

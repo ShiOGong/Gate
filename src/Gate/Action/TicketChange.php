@@ -6,7 +6,7 @@
  * Time: 上午10:33
  */
 
-namespace App\Http\Process\Gate\Action;
+namespace Gate\Action;
 
 class TicketChange extends GateActionAbs
 {

@@ -6,10 +6,10 @@
  * Time: 上午11:09
  */
 
-namespace App\Http\Process\Gate\Action;
+namespace Gate\Action;
 
 
-use App\Http\Process\Gate\Ticket\GateTicketAbs;
+use Gate\Ticket\GateTicketAbs;
 use Exception;
 
 class TicketCreate extends GateActionAbs

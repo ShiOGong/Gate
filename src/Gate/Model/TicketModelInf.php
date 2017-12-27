@@ -6,10 +6,11 @@
  * Time: 上午10:27
  */
 
-namespace App\Http\Process\Gate;
+namespace Gate\Model;
 
 
-use App\Http\Process\Gate\Ticket\GateTicketAbs;
+use Gate\GateBasisOf;
+use Gate\Ticket\GateTicketAbs;
 
 interface TicketModelInf
 {

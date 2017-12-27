@@ -6,10 +6,10 @@
  * Time: 上午10:29
  */
 
-namespace App\Http\Process\Gate\Action;
+namespace Gate\Action;
 
 
-use App\Http\Process\Gate\Ticket\GateTicketAbs;
+use Gate\Ticket\GateTicketAbs;
 
 abstract class GateActionAbs
 {

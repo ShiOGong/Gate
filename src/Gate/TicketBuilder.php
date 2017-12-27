@@ -6,12 +6,12 @@
  * Time: 下午3:29
  */
 
-namespace App\Http\Process\Gate;
+namespace Gate;
 
-use App\Http\Process\Gate\Action\GateActionAbs;
-use App\Http\Process\Gate\Exception\TicketNotExistException;
-use App\Http\Process\Gate\Store\LoginBeanInf;
-use App\Http\Process\Gate\Ticket\GateTicketAbs;
+use Gate\Action\GateActionAbs;
+use Gate\Exception\TicketNotExistException;
+use Gate\Store\LoginBeanInf;
+use Gate\Ticket\GateTicketAbs;
 
 class TicketBuilder
 {
