@@ -27,7 +27,7 @@ abstract class GateTicketAbs
 
     /**
      * 是否需要密码
-     * @return mixed
+     * @return boolean
      */
     abstract public function isNeedPassword();
 
@@ -38,7 +38,7 @@ abstract class GateTicketAbs
     abstract public function authentication();
 
     /**
-     * 是否授权过
+     * 是否授权成功
      * @return boolean
      */
     abstract public function isAuthenticateSuccess();
