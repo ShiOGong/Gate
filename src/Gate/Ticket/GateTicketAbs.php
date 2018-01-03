@@ -9,7 +9,7 @@
 namespace Gate\Ticket;
 
 use Gate\GateBasisOf;
-use Gate\TicketModelInf;
+use Gate\Model\TicketModelInf;
 
 abstract class GateTicketAbs
 {
