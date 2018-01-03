@@ -12,6 +12,11 @@ namespace Gate\Storage;
 interface LoginBeanInf
 {
     /**
+     * @param StorageInf|null $drive
+     * @return mixed
+     */
+    public static function getInstance(StorageInf $drive = null);
+    /**
      * @param null $key
      * @param $value
      * @return mixed
