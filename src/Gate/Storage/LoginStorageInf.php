@@ -8,6 +8,7 @@
 
 namespace Gate\Storage;
 
+use StorageDrive\Inf\StorageInf;
 
 interface LoginStorageInf
 {
@@ -16,6 +17,7 @@ interface LoginStorageInf
      * @return mixed
      */
     public static function getInstance(StorageInf $drive = null);
+
     /**
      * @param null $key
      * @param $value
