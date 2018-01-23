@@ -8,7 +8,7 @@
 
 namespace Gate\Ticket;
 
-use Gate\GateBasisOf;
+use Gate\GateRequestBean;
 use Gate\Model\TicketModelInf;
 
 abstract class GateTicketAbs
@@ -19,7 +19,7 @@ abstract class GateTicketAbs
     protected $matchingTicketData;
     private $model;
 
-    public function __construct(GateBasisOf $basisOfData, TicketModelInf $model)
+    public function __construct(GateRequestBean $basisOfData, TicketModelInf $model)
     {
         $this->basisOfData = $basisOfData;
         $this->model = $model;
@@ -75,7 +75,7 @@ abstract class GateTicketAbs
     public function matchingTicket()
     {
 
-        if (!$this->basisOfData instanceof GateBasisOf) {
+        if (!$this->basisOfData instanceof GateRequestBean) {
             throw new \Exception('参数类型错误');
         }
         if ($this->basisOfData->getTicketType() != $this->getTicketType()) {
@@ -110,7 +110,7 @@ abstract class GateTicketAbs
     public abstract function setTicketType($ticketType);
 
     /**
-     * @return GateBasisOf
+     * @return GateRequestBean
      */
     public function getBasisOfData()
     {
@@ -118,9 +118,9 @@ abstract class GateTicketAbs
     }
 
     /**
-     * @param GateBasisOf $basisOfData
+     * @param GateRequestBean $basisOfData
      */
-    public function setBasisOfData(GateBasisOf $basisOfData)
+    public function setBasisOfData(GateRequestBean $basisOfData)
     {
         $this->basisOfData = $basisOfData;
     }

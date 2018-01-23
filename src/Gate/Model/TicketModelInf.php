@@ -9,7 +9,7 @@
 namespace Gate\Model;
 
 
-use Gate\GateBasisOf;
+use Gate\GateRequestBean;
 use Gate\Ticket\GateTicketAbs;
 
 interface TicketModelInf
@@ -27,9 +27,9 @@ interface TicketModelInf
     public function isNeedPassword();
 
     /**
-     * @param GateBasisOf $basisOf
+     * @param GateRequestBean $basisOf
      * @param GateTicketAbs $ticket
      * @return mixed
      */
-    public function createTicket(GateBasisOf $basisOf, GateTicketAbs $ticket);
+    public function createTicket(GateRequestBean $basisOf, GateTicketAbs $ticket);
 }

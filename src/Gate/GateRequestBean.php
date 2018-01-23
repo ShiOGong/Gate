@@ -9,13 +9,13 @@
 namespace Gate;
 
 
-class GateBasisOf
+class GateRequestBean
 {
     private $ticketType;
     private $keyValue;
     private $password;
     private $userId;
-    private $account_id;
+    private $accountId;
 
     /**
      * @return mixed
@@ -83,7 +83,7 @@ class GateBasisOf
      */
     public function setAccountId($id)
     {
-        $this->account_id = $id;
+        $this->accountId = $id;
     }
 
     /**
@@ -91,7 +91,7 @@ class GateBasisOf
      */
     public function getAccountId()
     {
-        return $this->account_id;
+        return $this->accountId;
     }
 
 }

@@ -9,7 +9,7 @@
 namespace Gate\Storage;
 
 
-interface LoginBeanInf
+interface LoginStorageInf
 {
     /**
      * @param StorageInf|null $drive

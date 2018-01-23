@@ -10,10 +10,10 @@ namespace Gate;
 
 use Gate\Action\GateActionAbs;
 use Gate\Exception\TicketNotExistException;
-use Gate\Storage\LoginBeanInf;
+use Gate\Storage\LoginStorageInf;
 use Gate\Ticket\GateTicketAbs;
 
-class TicketBuilder
+class Gate
 {
     private $ticket;
     private $action;
@@ -53,11 +53,11 @@ class TicketBuilder
 
     /**
      * @param GateActionAbs $action
-     * @param LoginBeanInf $loginBean
+     * @param LoginStorageInf $loginBean
      * @return GateActionAbs
      * @throws \Exception
      */
-    public function actionByLoginBean(GateActionAbs $action, LoginBeanInf $loginBean)
+    public function actionByLoginBean(GateActionAbs $action, LoginStorageInf $loginBean)
     {
         if ($loginBean->getLoginData()) {
             $this->action = $action;
