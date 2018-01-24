@@ -15,13 +15,13 @@ abstract class GateTicketAbs
 {
     protected $isAuthenticateSuccess = false;
     protected $isNeedPassword = true;
-    protected $basisOfData;
+    protected $requestBeanData;
     protected $matchingTicketData;
     private $model;
 
-    public function __construct(GateRequestBean $basisOfData, TicketModelInf $model)
+    public function __construct(GateRequestBean $requestBean, TicketModelInf $model)
     {
-        $this->basisOfData = $basisOfData;
+        $this->requestBeanData = $requestBean;
         $this->model = $model;
     }
 
@@ -64,7 +64,7 @@ abstract class GateTicketAbs
      */
     public function checkBasisDataExist()
     {
-        $data = $this->model->selectByTicketValueAndType($this->basisOfData->getKeyValue(), $this->basisOfData->getTicketType())->toArray();
+        $data = $this->model->selectByTicketValueAndType($this->requestBeanData->getKeyValue(), $this->requestBeanData->getTicketType())->toArray();
         return $data ? true : false;
     }
 
@@ -75,13 +75,13 @@ abstract class GateTicketAbs
     public function matchingTicket()
     {
 
-        if (!$this->basisOfData instanceof GateRequestBean) {
+        if (!$this->requestBeanData instanceof GateRequestBean) {
             throw new \Exception('参数类型错误');
         }
-        if ($this->basisOfData->getTicketType() != $this->getTicketType()) {
+        if ($this->requestBeanData->getTicketType() != $this->getTicketType()) {
             throw new \Exception('票据类型错误');
         }
-        $data = $this->model->selectByTicketValueAndType($this->basisOfData->getKeyValue(), $this->basisOfData->getTicketType())->toArray();
+        $data = $this->model->selectByTicketValueAndType($this->requestBeanData->getKeyValue(), $this->requestBeanData->getTicketType())->toArray();
         $this->matchingTicketData = $data;
         if ($this->model->isNeedPassword()) {
             $this->isNeedPassword = true;
@@ -112,16 +112,16 @@ abstract class GateTicketAbs
     /**
      * @return GateRequestBean
      */
-    public function getBasisOfData()
+    public function getRequestBeanData()
     {
-        return $this->basisOfData;
+        return $this->requestBeanData;
     }
 
     /**
-     * @param GateRequestBean $basisOfData
+     * @param GateRequestBean $requestBeanData
      */
-    public function setBasisOfData(GateRequestBean $basisOfData)
+    public function setRequestBeanData(GateRequestBean $requestBeanData)
     {
-        $this->basisOfData = $basisOfData;
+        $this->requestBeanData = $requestBeanData;
     }
 }

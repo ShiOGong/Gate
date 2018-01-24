@@ -3,22 +3,22 @@
 
 ## 安装
 ```
-composer shiogong/gate install
+composer install shiogong/gate
 ```
 ## 用例
 ### 初始化
 ```
 // 入门票据基础类(用户输入的数据,存入相应的位置中)
-$basisOf = new GateBasisOf();
+$requestBean = new GateRequestBean();
 // 票据关键值
-$basisOf->setKeyValue($openId);
+$requestBean->setKeyValue($openId);
 // 票据类型
-$basisOf->setTicketType(UserToken::USER_TOKEN_TYPE_MINIPROGRAM);
+$requestBean->setTicketType(UserToken::USER_TOKEN_TYPE_MINIPROGRAM);
 
 // 票据存储的数据库model
 $tokenModel = new UserToken();
 // 票据的操作类
-$ticketObj = new GateTicketOpenId($basisOf, $tokenModel);
+$ticketObj = new GateTicketOpenId($requestBean, $tokenModel);
 // 初始化
 $ticketBuilder = new TicketBuilder($ticketObj));
 ```
@@ -109,7 +109,7 @@ $ticketBuilder->action($action);
      * 得到输入的数据
      * @return mixed
      */
-    function getBasisOfData();
+    function getRequestBeanData();
     
 ```
 

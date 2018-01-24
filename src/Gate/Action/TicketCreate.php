@@ -30,11 +30,11 @@ class TicketCreate extends GateActionAbs
             }
 
             $model = $ticket->getModel();
-            if (!$ticket->getBasisOfData()->getKeyValue()) {
+            if (!$ticket->getRequestBeanData()->getKeyValue()) {
                 throw new Exception('票据关键参数错误');
             }
 
-            $model->createTicket($ticket->getBasisOfData(), $ticket);
+            $model->createTicket($ticket->getRequestBeanData(), $ticket);
         }
     }
 

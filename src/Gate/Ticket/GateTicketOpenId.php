@@ -30,7 +30,7 @@ class GateTicketOpenId extends GateTicketAbs
      */
     public function authentication()
     {
-        if ($this->matchingTicketData[0]['user_token_value'] != $this->basisOfData->getKeyValue()) {
+        if ($this->matchingTicketData[0]['user_token_value'] != $this->requestBeanData->getKeyValue()) {
             throw new \Exception('关键值不能吻合');
         }
 //        $userModel = new User();
