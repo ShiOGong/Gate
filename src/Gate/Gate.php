@@ -21,7 +21,7 @@ class Gate
     const STOP_REASON_TICKET_NOT_EXIST = 200001;
 
     /**
-     * TicketBuilder constructor.
+     * Gate constructor.
      * @param GateTicketAbs $gateTicket
      */
     public function __construct(GateTicketAbs $gateTicket)

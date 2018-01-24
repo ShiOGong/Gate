@@ -105,11 +105,6 @@ abstract class GateTicketAbs
     }
 
     /**
-     * @param null $ticketType
-     */
-    public abstract function setTicketType($ticketType);
-
-    /**
      * @return GateRequestBean
      */
     public function getRequestBeanData()

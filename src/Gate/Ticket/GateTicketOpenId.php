@@ -68,14 +68,6 @@ class GateTicketOpenId extends GateTicketAbs
     }
 
     /**
-     * @param null $ticketType
-     */
-    public function setTicketType($ticketType)
-    {
-        $this->ticketType = $ticketType;
-    }
-
-    /**
      * @return mixed
      */
     public function getMatchingUserData()
@@ -96,7 +88,6 @@ class GateTicketOpenId extends GateTicketAbs
      */
     public function getTicketType()
     {
-//        return UserToken::USER_TOKEN_TYPE_MINIPROGRAM;
-        return 1;
+        return UserToken::USER_TOKEN_TYPE_MINIPROGRAM;
     }
 }

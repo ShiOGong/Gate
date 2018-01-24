@@ -20,7 +20,7 @@ $tokenModel = new UserToken();
 // 票据的操作类
 $ticketObj = new GateTicketOpenId($requestBean, $tokenModel);
 // 初始化
-$ticketBuilder = new TicketBuilder($ticketObj));
+$gate = new Gate($ticketObj);
 ```
 ### 设置数据Model
 记得你是需要实现一个数据Model的,这个Model必须实现TicketModelInf接口
@@ -28,7 +28,7 @@ $ticketBuilder = new TicketBuilder($ticketObj));
 ### 授权认证
 ```
 // 授权认证
-$ticket = $ticketBuilder->authentication();
+$ticket = $gate->authentication();
 ```
 
 ### 票据动作(系统预设)
@@ -37,7 +37,7 @@ $ticket = $ticketBuilder->authentication();
 #### 创建票据
 ```
 $action = new TicketCreate();
-$ticketBuilder->action($action);
+$gate->action($action);
 ```
 
 ## 扩展
@@ -114,7 +114,7 @@ $ticketBuilder->action($action);
 ```
 
 ##### 预设的验证或工具方法
-抽象类实现了几个核心流程方法,如果他们的验证方式不符合你的预期,你可以通过重载的方式解决这个问题
+抽象类实现了几个核心流程方法,如果他们的验证方式不符合你的预期,你可以通过覆写的方式解决这个问题
 ```$xslt
     /**
      * 匹配票据数据
